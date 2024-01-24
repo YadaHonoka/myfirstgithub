@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>研究用テストアプリケーション</title>
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="images/color-name-icon-512x512.png">
+    </head>
+    <body>
+        <h1>陸上アプリ用のテストHTML</h1>
+            <input type="button" onclick="location.href='./templates/login.html'" value="ログイン画面">
+            <input type="button" onclick="location.href='./templates/uploads.html'" value="アップロード画面">
+            
+            <script>
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener("load", function() {
+                        navigator.serviceWorker.register('sw.js');
+                    });
+                }
+            </script>
+    </body>
+</html>
